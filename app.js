@@ -131,3 +131,31 @@ next.forEach((nextBtn) => {
 prev.forEach((prevBtn) => {
     prevBtn.addEventListener('click', slideToPrev);
 });
+
+// This area will responsible for the css changing tasks of users.
+function cssChangeHandler(width, height, primaryColor, fontColor) {
+    const root = document.querySelector(':root');
+
+    if (width == null || height == null) {
+        alert('You need to enter both width and height values!');
+        return;
+    } else {
+        const questions = document.querySelectorAll('.question');
+        for (const question of questions) {
+            question.style.width = width + 'rem';
+            question.style.height = height + 'rem';
+        }
+    }
+
+    if (primaryColor == null && fontColor == null) {
+        return;
+    } else {
+        root.style.setProperty('--color-light', fontColor);
+        root.style.setProperty('--color-primary', primaryColor.toString(16));
+        root.style.setProperty(
+            '--color-primary-gradient', 
+            `linear-gradient(144deg, ${primaryColor} 0%, ${primaryColor}52 100%)`
+        );
+        root.style.setProperty('--color-primary-transparent', `${primaryColor}94`)
+    }
+}

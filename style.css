@@ -1,5 +1,15 @@
 /* General Styles (start) **********************************/
+:root {
+    --color-primary: orange;
+    --color-primary-transparent: #ffa60094;
+    --color-primary-gradient: linear-gradient(144deg, #ff6b00 0%, #ffcf52 100%);
+    --color-light: #fff;
+    --color-dark: #2a2a2a;
+}
+
 * {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,9 +36,9 @@ body {
 }
 
 .header {
-    background: linear-gradient(144deg, rgba(255,107,0,1) 0%, rgba(255,207,82,1) 100%);
+    background: var(--color-primary-gradient);
     width: inherit;
-    height: 6rem;
+    height: 25%;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -40,34 +50,33 @@ body {
 }
 
 .header p {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-light);
 }
 
 .body {
-    margin-top: 6rem;
+    height: 75%;
+    position: absolute;
+    top: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 5rem;
     width: 90%;
 }
 
 .choice {
-    color: orange;
+    color: var(--color-primary);
     font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0.5rem 0;
-    padding: 1.4rem 1rem;
+    padding: 7%;
     width: 100%;
-    border: 3px solid orange;
+    border: 3px solid var(--color-primary);
     border-radius: 5rem;
 }
 
 .prev, .next {
-    color: orange;
+    color: var(--color-primary);
     transform: translateY(50%);
     bottom: 50%;
     position: absolute;
@@ -83,11 +92,11 @@ body {
 }
 
 button {
-    outline: 5px solid rgba(255, 166, 0, 0.582);
+    outline: 5px solid var(--color-primary-transparent);
     border: none;
     border-radius: 5rem;
-    color: #fff;
-    background-color: orange;
+    color: var(--color-light);
+    background-color: var(--color-primary);
     position: absolute;
     bottom: -4.5rem;
     padding: 1rem 2rem;
@@ -102,12 +111,12 @@ button:hover {
 /* Styles for utility (start)*****************************/
 .current {
     display: flex;
-    box-shadow: 0 0 1rem #2a2a2a;
+    box-shadow: 0 0 1rem var(--color-dark);
 }
 
 .active {
-    background-color: orange;
-    color: #fff;
-    outline: 5px solid rgb(255, 197, 88);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    outline: 5px solid var(--color-primary-transparent);
 }
 /* Styles for utility (end) *****************************/

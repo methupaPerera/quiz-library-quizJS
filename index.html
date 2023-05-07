@@ -22,17 +22,13 @@
         <div class="quiz-cont">
             <!-- Please copy and paste the marked area to add questions start in here... -->
             <div class="question">
-                <div class="prev">
-                    <i class="bi bi-chevron-compact-left"></i>
-                </div>
+                <div class="prev"><i class="bi bi-chevron-compact-left"></i></div>
                 <div class="header">
-                    <p>
-                        <span class="q-n">1</span>.<!-- Your question here -->
-                    </p>
+                    <p><span class="q-n">1</span>.<!-- Your question here --></p>
                 </div>
                 <div class="body">
                     <!-- Please add the class "right" to the correct answer -->
-                    <p class="choice choice-one right"><!-- Your Option --></p>
+                    <p class="choice choice-one"><!-- Your Option --></p>
                     <p class="choice choice-two"><!-- Your Option --></p>
                     <p class="choice choice-three"><!-- Your Option --></p>
                     <p class="choice choice-four"><!-- Your Option --></p>
@@ -42,10 +38,12 @@
                 </div>
             </div>
             <!-- ...to here -->
-            
             <button id="check">Check</button>
         </div>
 
         <script src="app.js"></script>
+        <script>
+            cssChangeHandler(30, 30, '#09A207');
+        </script>
     </body>
 </html>
