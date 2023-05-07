@@ -7,7 +7,10 @@
         <title>Score as higher as you can!</title>
 
         <!-- Bootstrap Icon CDN and CSS file. -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -15,13 +18,17 @@
 
         <!-- If you want to create a quiz carousel in your website please copy the whole
         div with the class of "quiz-cont" and import the style.css, app.js and bootstrap icon cdn. -->
-        
+
         <div class="quiz-cont">
             <!-- Please copy and paste the marked area to add questions start in here... -->
             <div class="question">
-                <div class="prev"><i class="bi bi-chevron-compact-left"></i></div>
+                <div class="prev">
+                    <i class="bi bi-chevron-compact-left"></i>
+                </div>
                 <div class="header">
-                    <p><span class="q-n">1</span>.<!-- Your question here --></p>
+                    <p>
+                        <span class="q-n">1</span>.<!-- Your question here -->
+                    </p>
                 </div>
                 <div class="body">
                     <!-- Please add the class "right" to the correct answer -->
@@ -30,13 +37,14 @@
                     <p class="choice choice-three"><!-- Your Option --></p>
                     <p class="choice choice-four"><!-- Your Option --></p>
                 </div>
-                <div class="next"><i class="bi bi-chevron-compact-right"></i></div>
+                <div class="next">
+                    <i class="bi bi-chevron-compact-right"></i>
+                </div>
             </div>
             <!-- ...to here -->
+            
+            <button id="check">Check</button>
         </div>
-
-        <!-- Copy and paste this line of code also. -->
-        <button id="check">Check</button>
 
         <script src="app.js"></script>
     </body>

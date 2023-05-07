@@ -1,26 +1,28 @@
+/* General Styles (start) **********************************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 body {
     user-select: none;
-    width: 100vw;
-    height: 100vh;
+}
+
+.quiz-cont {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    transform: translate(-15rem, -15rem);
 }
 
 .question {
     display: none;
-    height: 30rem;
-    width: 30rem;
+    height: 25rem;
+    width: 25rem;
     justify-content: center;
-    position: absolute;
-    border-radius: 3rem;
+    border-radius: 2.5rem;
+    position: relative;
 }
 
 .header {
@@ -32,8 +34,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
+    border-top-right-radius: 2.5rem;
+    border-top-left-radius: 2.5rem;
     font-size: 1.2rem;
 }
 
@@ -49,8 +51,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 3rem;
-    width: 24rem;
+    border-radius: 5rem;
+    width: 90%;
 }
 
 .choice {
@@ -58,21 +60,10 @@ body {
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0.5rem 0;
-    padding: 1rem;
+    padding: 1.4rem 1rem;
     width: 100%;
     border: 3px solid orange;
     border-radius: 5rem;
-}
-
-.current {
-    display: flex;
-    box-shadow: 0 0 1rem #2a2a2a;
-}
-
-.active {
-    background-color: orange;
-    color: #fff;
-    outline: 5px solid rgb(255, 197, 88);
 }
 
 .prev, .next {
@@ -92,9 +83,31 @@ body {
 }
 
 button {
+    outline: 5px solid rgba(255, 166, 0, 0.582);
+    border: none;
+    border-radius: 5rem;
+    color: #fff;
+    background-color: orange;
     position: absolute;
-    bottom: -15rem;
-    transform: translateX(15rem);
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
+    bottom: -4.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
 }
+
+button:hover {
+    outline: none;
+}
+/* General Styles (end) **********************************/
+
+/* Styles for utility (start)*****************************/
+.current {
+    display: flex;
+    box-shadow: 0 0 1rem #2a2a2a;
+}
+
+.active {
+    background-color: orange;
+    color: #fff;
+    outline: 5px solid rgb(255, 197, 88);
+}
+/* Styles for utility (end) *****************************/
