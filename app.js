@@ -49,7 +49,8 @@ function resultsHandler() {
 
     // This if check will make sure that the user won't make any mistakes.
     if (
-        rightAnswers.length === allQuestions.length &&
+        (rightAnswers.length === allQuestions.length ||
+        rightAnswers.length === 0 && chosedAnswers.length === 0) &&
         chosedAnswers.length === 0 ||
         rightAnswers.length !== chosedAnswers.length
     ) {
