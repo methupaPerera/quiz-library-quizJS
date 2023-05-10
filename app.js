@@ -29,7 +29,7 @@ function resultsHandler() {
     rightAnswers.length = 0;
     chosedAnswers.length = 0;
 
-    // This nested loop will pushes the p elements with the "right" class
+    // This nested loop will pushes the p elements with the "right" class to rightAnswers Array.
     for (const options of choicesList) {
         for (const option of options) {
             if (option.classList.contains('right')) {
@@ -38,7 +38,7 @@ function resultsHandler() {
         }
     }
 
-    // This nested loop will pushes the p elements with the "active" class
+    // This nested loop will pushes the p elements with the "active" class to chosedAnswers Array.
     for (const options of choicesList) {
         for (const option of options) {
             if (option.classList.contains('active')) {
